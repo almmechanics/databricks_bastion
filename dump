@@ -1,0 +1,14 @@
+
+subnet {
+    name           = "AzureBastionSubnet"
+    address_prefix = "cidrsubnet( var.vnet_cidr,11,16)"
+  }
+
+  subnet {
+    name           = "databricks"
+    address_prefix = "cidrsubnet( var.vnet_cidr,8,4)"
+  }
+
+  subnet {
+    name           = "IaaSSubnet"
+  }
