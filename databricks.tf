@@ -67,4 +67,5 @@ resource "azurerm_template_deployment" "databricks" {
     publicSubnetId     = "${azurerm_subnet.publicdatabricks.address_prefix}"
     pricingTier = "trial"
   }
+  depends_on = [azurerm_subnet.publicdatabricks]
 }
